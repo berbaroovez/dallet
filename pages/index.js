@@ -5,5 +5,10 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
-  return <Title>My page</Title>;
+  return (
+    <>
+      <Title>Rallet</Title>
+      <p>A place to track your online purchases</p>
+    </>
+  );
 }
