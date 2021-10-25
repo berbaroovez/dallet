@@ -8,6 +8,12 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+html {
+  font-family: sans-serif;
+  background-color: #FFFEF2
+
+}
+
 /* Remove default margin */
 body,
 h1,
