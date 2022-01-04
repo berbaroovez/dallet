@@ -7,16 +7,14 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
 
   const { signOut, signIn, user } = useAuth();
-
   useEffect(() => {
     if (user?.email) {
       router.push("/dashboard");
     }
   }, [user]);
-
   return (
     <FormZone>
-      <h1>sign up</h1>
+      <h1>sign in</h1>
 
       <form
         onSubmit={(e) => {
@@ -26,7 +24,7 @@ const SignUp = () => {
       >
         <input
           type="email"
-          placeholder="email"
+          placeholder="Email"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);

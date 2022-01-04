@@ -5,7 +5,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (typeof id === "string") {
     const response = await getReceipt(id);
-
+    console.log(response);
     if (response?.error) {
       res.status(500).json({ error: response.error });
     }

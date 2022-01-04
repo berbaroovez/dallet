@@ -5,7 +5,7 @@ const getUserReceipts = async (userId: string) => {
   const { error, data } = await supabase
     .from<Receipt>("receipt")
     .select("*")
-    .eq("user", userId);
+    .eq("user_id", userId);
   if (error) {
     return { error: error.message };
   }
@@ -27,7 +27,7 @@ const getReceipt = async (receiptId: string) => {
     if (data.length === 0) {
       return { error: "Receipt not found" };
     }
-    return { data };
+    return { data: data[0] };
   }
 };
 

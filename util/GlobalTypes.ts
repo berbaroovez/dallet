@@ -5,7 +5,7 @@ type Receipt = {
   notes?: string;
   url?: string;
   price?: number;
-  user: string;
+  user_id: string;
   type: string;
   filePath?: string;
   file_extension?: string;
